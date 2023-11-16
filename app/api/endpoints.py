@@ -11,6 +11,12 @@ api_routes = APIRouter()
 
 
 @api_routes.get('/')
+def check_server():
+    """Check if the server is running"""
+    return {"message": "Server is up and running!"}
+
+
+@api_routes.get('/')
 def redirect_to_docs():
     """Redirect to API docs when at site root"""
     return RedirectResponse('/redoc')

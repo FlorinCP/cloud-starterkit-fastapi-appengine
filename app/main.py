@@ -6,6 +6,7 @@ from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
 from app.api.endpoints import api_routes
+from app.api.websockets_endpoints import ws_router
 
 
 def create_app():
@@ -22,6 +23,7 @@ def create_app():
     )
 
     app.include_router(api_routes)
+    app.include_router(ws_router)
 
     return app
 
