@@ -1,2 +1,3 @@
 # Production requirements for Google App Engine
 -r requirements-common.txt
+requests~=2.31.0
