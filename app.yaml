@@ -11,7 +11,16 @@ runtime_config:
 
 # Set App Engine instance class (defaults to F1)
 # See https://cloud.google.com/appengine/docs/standard/#instance_classes
-instance_class: F1
+#instance_class: F1
+
+
+manual_scaling:
+  instances: 1
+
+
+resources:
+  cpu: 20
+  memory_gb: 20
 
 # Set entrypoint to locate FastAPI app, which is 'application' in module app/main.py
 # Configure gunicorn worker count via --workers arg based on the App Engine instance class
